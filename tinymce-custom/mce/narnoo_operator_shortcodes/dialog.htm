@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Narnoo Shortcode</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+	<style type="text/css">	
+	label {
+		width: 12em;
+		float: left;
+		margin-right: 0.5em;
+		margin-left: 0.5em;
+		display: block
+	}
+	
+	.label_cb {
+		float: none;
+		text-align: left;
+		display: inline;
+	}
+	
+	input[type="text"] {
+		width: 15em;
+	}
+	
+	.submit input {
+		margin-left: 2em;
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+
+<div>Select shortcode to insert:
+	<select id="shortcode" name="shortcode">
+		<option value="narnoo_operator_brochure">[narnoo_operator_brochure]</option>
+		<option value="narnoo_operator_video">[narnoo_operator_video]</option>
+		<option value="narnoo_operator_tiles_gallery">[narnoo_operator_tiles_gallery]</option>
+		<option value="narnoo_operator_slider_gallery">[narnoo_operator_slider_gallery]</option>
+		<option value="narnoo_operator_single_link_gallery">[narnoo_operator_single_link_gallery]</option>
+		<option value="narnoo_operator_grid_gallery">[narnoo_operator_grid_gallery]</option>
+	</select>
+</div>
+
+<br /><br />
+
+<form action="">
+
+<div id="narnoo_operator_brochure_section" class="shortcode_section">
+	<fieldset>
+	<legend>Brochure Shortcode</legend>
+	<p><label for="brochure_id">id:</label><input id="brochure_id" name="brochure_id" type="text" /></p>
+	<p><label for="brochure_width">width:</label><input id="brochure_width" name="brochure_width" type="text" /></p>
+	<p><label for="brochure_height">height:</label><input id="brochure_height" name="brochure_height" type="text" /></p>
+	<p><label for="brochure_image">image:</label>
+		<select id="brochure_image" name="brochure_image">
+			<option value="">thumbnail</option>
+			<option value="preview">preview</option>
+		</select>
+	</p>
+	<p><label for="brochure_align">align:</label>
+		<select id="brochure_align" name="brochure_align">
+			<option value="">none</option>
+			<option value="left">left</option>
+			<option value="center">center</option>
+			<option value="right">right</option>
+		</select>
+	</p>
+	<p><label for="brochure_img_title">img_title:</label><input id="brochure_img_title" name="brochure_img_title" type="text" /></p>
+	<p><label for="brochure_img_alt">img_alt:</label><input id="brochure_img_alt" name="brochure_img_alt" type="text" /></p>
+	<hr />
+	<div class="submit">
+		<input type="button" id="brochure_insert" class="button-primary" value="Insert shortcode" />
+		<input type="button" id="brochure_cancel" value="Cancel" onclick="tinyMCEPopup.close();" />
+	</div>
+</div>
+
+<div id="narnoo_operator_video_section" class="shortcode_section" style="display:none;">
+	<fieldset>
+	<legend>Video Shortcode</legend>
+	<p><label for="video_id">id:</label><input id="video_id" name="video_id" type="text" /></p>
+	<p><label for="video_width">width:</label><input id="video_width" name="video_width" type="text" /></p>
+	<p><label for="video_height">height:</label><input id="video_height" name="video_height" type="text" /></p>
+	<p><label for="video_autoplay">autoplay:</label>
+		<select id="video_autoplay" name="video_autoplay">
+			<option value="">no</option>
+			<option value="yes">yes</option>
+		</select>
+	</p>
+	<p><label for="video_play_btn_scale">play_btn_scale:</label><input id="video_play_btn_scale" name="video_play_btn_scale" type="text" /></p>
+	<p><label for="video_text_color">text_color:</label><input id="video_text_color" name="video_text_color" type="text" /></p>
+	<p><label for="video_play_color">play_color:</label><input id="video_play_color" name="video_play_color" type="text" /></p>
+	<p><label for="video_playover_color">playover_color:</label><input id="video_playover_color" name="video_playover_color" type="text" /></p>
+	<p><label for="video_playbk_color">playbk_color:</label><input id="video_playbk_color" name="video_playbk_color" type="text" /></p>
+	<p><label for="video_playbk_alpha">playbk_alpha:</label><input id="video_playbk_alpha" name="video_playbk_alpha" type="text" /></p>
+	<p><label for="video_playbkover_color">playbkover_color:</label><input id="video_playbkover_color" name="video_playbkover_color" type="text" /></p>
+	<p><label for="video_rollover_color">rollover_color:</label><input id="video_rollover_color" name="video_rollover_color" type="text" /></p>
+	<p><label for="video_bar_color">bar_color:</label><input id="video_bar_color" name="video_bar_color" type="text" /></p>
+	<p><label for="video_clocktotal_color">clocktotal_color:</label><input id="video_clocktotal_color" name="video_clocktotal_color" type="text" /></p>
+	<p><label for="video_timesplit_color">timesplit_color:</label><input id="video_timesplit_color" name="video_timesplit_color" type="text" /></p>
+	<p><label for="video_clock_color">clock_color:</label><input id="video_clock_color" name="video_clock_color" type="text" /></p>
+	<p><label for="video_loaded_color">loaded_color:</label><input id="video_loaded_color" name="video_loaded_color" type="text" /></p>
+	<p><label for="video_playhead_color">playhead_color:</label><input id="video_playhead_color" name="video_playhead_color" type="text" /></p>
+	<p><label for="video_progress_color">progress_color:</label><input id="video_progress_color" name="video_progress_color" type="text" /></p>
+	<hr />
+	<div class="submit">
+		<input type="button" id="video_insert" value="Insert shortcode" />
+		<input type="button" id="video_cancel" value="Cancel" onclick="tinyMCEPopup.close();" />
+	</div>
+</div>
+
+<div id="narnoo_operator_tiles_gallery_section" class="shortcode_section" style="display:none;">
+	<fieldset>
+	<legend>Tiles Gallery Shortcode</legend>
+	<p><label for="tiles_gallery_album_name">album_name:</label><input id="tiles_gallery_album_name" name="tiles_gallery_album_name" type="text" /></p>
+	<p><label for="tiles_gallery_width">width:</label><input id="tiles_gallery_width" name="tiles_gallery_width" type="text" /></p>
+	<p><label for="tiles_gallery_height">height:</label><input id="tiles_gallery_height" name="tiles_gallery_height" type="text" /></p>
+	<p><label for="tiles_gallery_border_color">border_color:</label><input id="tiles_gallery_border_color" name="tiles_gallery_border_color" type="text" /></p>
+	<hr />
+	<div class="submit">
+		<input type="button" id="tiles_gallery_insert" value="Insert shortcode" />
+		<input type="button" id="tiles_gallery_cancel" value="Cancel" onclick="tinyMCEPopup.close();" />
+	</div>
+</div>
+
+<div id="narnoo_operator_slider_gallery_section" class="shortcode_section" style="display:none;">
+	<fieldset>
+	<legend>Slider Gallery Shortcode</legend>
+	<p><label for="slider_gallery_album_name">album_name:</label><input id="slider_gallery_album_name" name="slider_gallery_album_name" type="text" /></p>
+	<p><label for="slider_gallery_width">width:</label><input id="slider_gallery_width" name="slider_gallery_width" type="text" /></p>
+	<p><label for="slider_gallery_timer">timer:</label><input id="slider_gallery_timer" name="slider_gallery_timer" type="text" /></p>
+	<p><label for="slider_gallery_circular">circular:</label>
+		<select id="slider_gallery_circular" name="slider_gallery_circular">
+			<option value="true">true</option>
+			<option value="">false</option>
+		</select>
+	</p>
+	<hr />
+	<div class="submit">
+		<input type="button" id="slider_gallery_insert" value="Insert shortcode" />
+		<input type="button" id="slider_gallery_cancel" value="Cancel" onclick="tinyMCEPopup.close();" />
+	</div>
+</div>
+
+<div id="narnoo_operator_single_link_gallery_section" class="shortcode_section" style="display:none;">
+	<fieldset>
+	<legend>Single Link Gallery Shortcode</legend>
+	<p><label for="single_link_gallery_album_name">album_name:</label><input id="single_link_gallery_album_name" name="single_link_gallery_album_name" type="text" /></p>
+	<p><label for="single_link_gallery_width">width:</label><input id="single_link_gallery_width" name="single_link_gallery_width" type="text" /></p>
+	<p><label for="single_link_gallery_height">height:</label><input id="single_link_gallery_height" name="single_link_gallery_height" type="text" /></p>
+	<hr />
+	<div class="submit">
+		<input type="button" id="single_link_gallery_insert" value="Insert shortcode" />
+		<input type="button" id="single_link_gallery_cancel" value="Cancel" onclick="tinyMCEPopup.close();" />
+	</div>
+</div>
+
+<div id="narnoo_operator_grid_gallery_section" class="shortcode_section" style="display:none;">
+	<fieldset>
+	<legend>Grid Gallery Shortcode</legend>
+	<p><label for="grid_gallery_album_name">album_name:</label><input id="grid_gallery_album_name" name="grid_gallery_album_name" type="text" /></p>
+	<p><label for="grid_gallery_width">width:</label><input id="grid_gallery_width" name="grid_gallery_width" type="text" /></p>
+	<p><label for="grid_gallery_height">height:</label><input id="grid_gallery_height" name="grid_gallery_height" type="text" /></p>
+	<p><label for="grid_gallery_downloadable">downloadable:</label>
+			<select id="grid_gallery_downloadable" name="grid_gallery_downloadable">
+			<option value="">true</option>
+			<option value="false">false</option>
+		</select>
+	</p>
+	<p><label for="grid_gallery_bandwidth">bandwidth:</label>
+			<select id="grid_gallery_bandwidth" name="grid_gallery_bandwidth">
+			<option value="true">true</option>
+			<option value="" selected="selected">false</option>
+		</select>
+	</p>
+	<hr />
+	<div class="submit">
+		<input type="button" id="grid_gallery_insert" value="Insert shortcode" />
+		<input type="button" id="grid_gallery_cancel" value="Cancel" onclick="tinyMCEPopup.close();" />
+	</div>
+</div>
+
+</form>
+
+</body>
+</html>
